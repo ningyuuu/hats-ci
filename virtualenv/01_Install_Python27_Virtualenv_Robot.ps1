@@ -19,13 +19,13 @@ Start-Process msiexec.exe -ArgumentList "/i `"$path_to_hats\VCForPython27.msi`" 
 
 echo "Downloading Python 2.7"
 
-if ([System.IntPtr]::Size -eq 4) 
+if ([System.IntPtr]::Size -eq 4)
 {
-	echo "Your system is 32-bit - Downloading..." 
+	echo "Your system is 32-bit - Downloading..."
 	$client.DownloadFile($iniContent["Python"]["Python27-32"],"$path_to_hats\python27.msi");
 
-}	
-else 
+}
+else
 {
 	echo "Your system is 64-bit - Downloading..."
 	$client.DownloadFile($iniContent["Python"]["Python27-64"],"$path_to_hats\python27.msi");
@@ -38,12 +38,8 @@ Start-Process msiexec.exe -ArgumentList "/a `"$path_to_hats\python27.msi`" /qn T
 echo "Completed installing Python 2.7"
 
 echo "Set path to Python for this session"
-<<<<<<< HEAD
-$env:Path = "$env:Path;$path_to_hats\Python27;$path_to_hats\Python27\Scripts";
-=======
 $env:Path = "$env:windir;$env:windir\system32;"
 $env:Path = "$path_to_hats\Python27;$path_to_hats\Python27\Scripts";
->>>>>>> ce6fcb68058b656c46ee319f1b4a55d01bfe72a1
 
 echo "Installing pip"
 $client.DownloadFile("https://bootstrap.pypa.io/get-pip.py","$path_to_hats\get-pip.py");
