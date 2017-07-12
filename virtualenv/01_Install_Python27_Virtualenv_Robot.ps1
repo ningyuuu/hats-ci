@@ -26,7 +26,7 @@ Start-Process msiexec.exe -ArgumentList "/a `"$path_to_hats\python27.msi`" /qn T
 echo "Completed installing Python 2.7"
 
 echo "Set path to Python for this session"
-$env:Path = "$env:Path:$path_to_hats\Python27;$path_to_hats\Python27\Scripts";
+$env:Path = "$env:Path;$path_to_hats\Python27;$path_to_hats\Python27\Scripts";
 
 echo "Installing pip"
 $client.DownloadFile("https://bootstrap.pypa.io/get-pip.py","$path_to_hats\get-pip.py");
@@ -37,7 +37,7 @@ echo "Install VirtualEnv"
 pip install virtualenv
 
 echo "Create and Activate VirtualEnv robot"
-virtualenv robot 
+virtualenv robot
 & robot\Scripts\activate
 
 echo "Install pip modules"
@@ -45,4 +45,4 @@ $client.DownloadFile($iniContent["hats"]["RobotPipInstallList"],"$path_to_hats\p
 
 pip install -r .\pip-install-list.txt
 pip install functools
-virtualenv --relocatable robot 
+virtualenv --relocatable robot
