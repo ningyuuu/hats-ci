@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="3" tests="3" errors="0" name="hats" skip="0">
+<testcase classname="hats" name="Beanie test using Internet Explorer" time="0">
+<failure message="WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver&#10;" type="AssertionError"></failure>
+</testcase>
+<testcase classname="hats" name="Beanie test using Chrome" time="0">
+<failure message="WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home&#10;" type="AssertionError"></failure>
+</testcase>
+<testcase classname="hats" name="Beanie test using Firefox" time="0">
+<failure message="WebDriverException: Message: 'geckodriver' executable needs to be in PATH. &#10;" type="AssertionError"></failure>
+</testcase>
+</testsuite>

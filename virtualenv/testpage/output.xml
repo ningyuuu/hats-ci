@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170712 14:20:27.831" generator="Robot 2.9 (Python 2.7 on win32)">
+<suite source="C:\Users\devops\Desktop\hats-ci\virtualenv\testpage\test.robot" id="s1" name="hats">
+<test id="s1-t1" name="Beanie test using Internet Explorer">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.000" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 14:20:28.001" starttime="20170712 14:20:28.000"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IE_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>ie</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>IE is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>ie</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.004" level="INFO">Opening browser 'ie' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170712 14:20:28.016" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170712 14:20:28.017" starttime="20170712 14:20:28.013"></status>
+</kw>
+<msg timestamp="20170712 14:20:28.017" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 14:20:28.020" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" endtime="20170712 14:20:28.022" starttime="20170712 14:20:28.003"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.023" starttime="20170712 14:20:28.002"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.023" starttime="20170712 14:20:28.001"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.023" critical="yes" starttime="20170712 14:20:27.999">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from http://selenium-release.storage.googleapis.com/index.html and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t2" name="Beanie test using Chrome">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.026" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 14:20:28.027" starttime="20170712 14:20:28.026"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${CHROME_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>chrome</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Chrome is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>chrome</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.030" level="INFO">Opening browser 'chrome' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170712 14:20:28.034" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170712 14:20:28.034" starttime="20170712 14:20:28.032"></status>
+</kw>
+<msg timestamp="20170712 14:20:28.035" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 14:20:28.037" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<status status="FAIL" endtime="20170712 14:20:28.040" starttime="20170712 14:20:28.030"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.041" starttime="20170712 14:20:28.029"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.041" starttime="20170712 14:20:28.028"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.042" critical="yes" starttime="20170712 14:20:28.025">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<test id="s1-t3" name="Beanie test using Firefox">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.045" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 14:20:28.045" starttime="20170712 14:20:28.044"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${FF_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>ff</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Firefox is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>ff</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 14:20:28.048" level="INFO">Opening browser 'ff' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170712 14:20:28.059" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170712 14:20:28.059" starttime="20170712 14:20:28.057"></status>
+</kw>
+<msg timestamp="20170712 14:20:28.059" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 14:20:28.061" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170712 14:20:28.065" starttime="20170712 14:20:28.047"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.065" starttime="20170712 14:20:28.046"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.065" starttime="20170712 14:20:28.045"></status>
+</kw>
+<status status="FAIL" endtime="20170712 14:20:28.066" critical="yes" starttime="20170712 14:20:28.043">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<doc>A test suite with a single test for Beanie
+Created by Robot Extension</doc>
+<status status="FAIL" endtime="20170712 14:20:28.069" starttime="20170712 14:20:27.833"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="hats" pass="0">hats</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170712 14:20:28.017" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 14:20:28.035" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 14:20:28.059" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>
