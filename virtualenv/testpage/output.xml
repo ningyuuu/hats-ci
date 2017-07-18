@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170712 15:05:51.603" generator="Robot 2.9 (Python 2.7.13 on win32)">
+<suite source="C:\Users\devops\Desktop\hats-ci\virtualenv\testpage\test.robot" id="s1" name="hats">
+<test id="s1-t1" name="Beanie test using Internet Explorer">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 15:05:52.521" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 15:05:52.521" starttime="20170712 15:05:52.521"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IE_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>ie</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>IE is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>ie</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 15:05:52.525" level="INFO">Opening browser 'ie' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<status status="PASS" endtime="20170712 15:05:59.533" starttime="20170712 15:05:52.524"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//i[@id="link-edit-1-i"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:05:59.630" starttime="20170712 15:05:59.533"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//i[@id="link-edit-1-i"]</arg>
+</arguments>
+<msg timestamp="20170712 15:05:59.630" level="INFO">Clicking element '//i[@id="link-edit-1-i"]'.</msg>
+<status status="PASS" endtime="20170712 15:06:00.072" starttime="20170712 15:05:59.630"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//input[@name="device[name]"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:06:00.122" starttime="20170712 15:06:00.072"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//input[@name="device[name]"]</arg>
+<arg>iPhone 7 - hello</arg>
+</arguments>
+<msg timestamp="20170712 15:06:00.122" level="INFO">Typing text 'iPhone 7 - hello' into text field '//input[@name="device[name]"]'</msg>
+<status status="PASS" endtime="20170712 15:06:00.663" starttime="20170712 15:06:00.122"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//button[@name="button"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:06:00.710" starttime="20170712 15:06:00.663"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[@name="button"]</arg>
+</arguments>
+<msg timestamp="20170712 15:06:00.711" level="INFO">Clicking element '//button[@name="button"]'.</msg>
+<status status="PASS" endtime="20170712 15:06:01.145" starttime="20170712 15:06:00.710"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170712 15:06:04.190" starttime="20170712 15:06:01.146"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:04.191" starttime="20170712 15:05:52.523"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:04.192" starttime="20170712 15:05:52.522"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:04.193" critical="yes" starttime="20170712 15:05:52.520"></status>
+</test>
+<test id="s1-t2" name="Beanie test using Chrome">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 15:06:04.198" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 15:06:04.198" starttime="20170712 15:06:04.198"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${CHROME_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>chrome</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Chrome is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>chrome</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 15:06:04.202" level="INFO">Opening browser 'chrome' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<status status="PASS" endtime="20170712 15:06:10.245" starttime="20170712 15:06:04.201"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//i[@id="link-edit-1-i"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:06:10.269" starttime="20170712 15:06:10.246"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//i[@id="link-edit-1-i"]</arg>
+</arguments>
+<msg timestamp="20170712 15:06:10.271" level="INFO">Clicking element '//i[@id="link-edit-1-i"]'.</msg>
+<status status="PASS" endtime="20170712 15:06:10.487" starttime="20170712 15:06:10.270"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//input[@name="device[name]"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:06:10.513" starttime="20170712 15:06:10.487"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//input[@name="device[name]"]</arg>
+<arg>iPhone 7 - hello</arg>
+</arguments>
+<msg timestamp="20170712 15:06:10.514" level="INFO">Typing text 'iPhone 7 - hello' into text field '//input[@name="device[name]"]'</msg>
+<status status="PASS" endtime="20170712 15:06:11.065" starttime="20170712 15:06:10.514"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//button[@name="button"]</arg>
+</arguments>
+<status status="PASS" endtime="20170712 15:06:11.084" starttime="20170712 15:06:11.066"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[@name="button"]</arg>
+</arguments>
+<msg timestamp="20170712 15:06:11.085" level="INFO">Clicking element '//button[@name="button"]'.</msg>
+<status status="PASS" endtime="20170712 15:06:11.324" starttime="20170712 15:06:11.085"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170712 15:06:14.433" starttime="20170712 15:06:11.324"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:14.435" starttime="20170712 15:06:04.200"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:14.435" starttime="20170712 15:06:04.199"></status>
+</kw>
+<status status="PASS" endtime="20170712 15:06:14.437" critical="yes" starttime="20170712 15:06:04.197"></status>
+</test>
+<test id="s1-t3" name="Beanie test using Firefox">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage</arg>
+</arguments>
+<msg timestamp="20170712 15:06:14.441" level="INFO">C:\Users\devops\Desktop\hats-ci\virtualenv\testpage</msg>
+<status status="PASS" endtime="20170712 15:06:14.442" starttime="20170712 15:06:14.441"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${FF_EXISTS}</arg>
+<arg>Beanie test</arg>
+<arg>ff</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Firefox is not installed</arg>
+</arguments>
+<kw name="Beanie test">
+<arguments>
+<arg>ff</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>file://C:\\Users\\devops\\Desktop\\hats-ci\\virtualenv\\testpage/Beanie.html</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20170712 15:06:14.444" level="INFO">Opening browser 'ff' to base url 'file://C:\Users\devops\Desktop\hats-ci\virtualenv\testpage/Beanie.html'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170712 15:06:16.671" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170712 15:06:16.672" starttime="20170712 15:06:16.669"></status>
+</kw>
+<msg timestamp="20170712 15:06:16.672" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170712 15:06:16.676" level="FAIL">WebDriverException: Message: Unable to find a matching set of capabilities
+</msg>
+<status status="FAIL" endtime="20170712 15:06:16.681" starttime="20170712 15:06:14.443"></status>
+</kw>
+<status status="FAIL" endtime="20170712 15:06:16.682" starttime="20170712 15:06:14.443"></status>
+</kw>
+<status status="FAIL" endtime="20170712 15:06:16.682" starttime="20170712 15:06:14.442"></status>
+</kw>
+<status status="FAIL" endtime="20170712 15:06:16.683" critical="yes" starttime="20170712 15:06:14.440">WebDriverException: Message: Unable to find a matching set of capabilities
+</status>
+</test>
+<doc>A test suite with a single test for Beanie
+Created by Robot Extension</doc>
+<status status="FAIL" endtime="20170712 15:06:16.687" starttime="20170712 15:05:51.606"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="hats" pass="2">hats</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170712 15:06:16.672" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>
